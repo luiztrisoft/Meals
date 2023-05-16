@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meals/screens/categories_meals_screen.dart';
 import 'screens/categories_screen.dart';
 
 void main() {
@@ -11,10 +12,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        //title: 'Vamos Cozinhar? Aula 182',
+        //title: 'MENU PRINCIPAL',
         theme: ThemeData(
         colorScheme: ColorScheme.fromSwatch().copyWith(
-          primary: Colors.pink,
+          primary: Colors.cyan,
           secondary: Colors.amber,
         ),
         canvasColor: const Color.fromRGBO(255, 254, 229, 1),
@@ -26,7 +27,11 @@ class MyApp extends StatelessWidget {
               ),
             ),
       ),
-        home: const CategoriesScreen()
+        home: const CategoriesScreen(),
+        routes: {
+          '/categories-meals': (ctx) => const 
+          CategoriesMealsScreen(),
+        }
       );
   }
 }
